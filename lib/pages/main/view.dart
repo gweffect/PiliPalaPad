@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/models/common/dynamic_badge_mode.dart';
-import 'package:PiliPalaX/pages/dynamics/index.dart';
-import 'package:PiliPalaX/pages/home/index.dart';
-import 'package:PiliPalaX/pages/media/index.dart';
-import 'package:PiliPalaX/utils/event_bus.dart';
-import 'package:PiliPalaX/utils/feed_back.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/models/common/dynamic_badge_mode.dart';
+import 'package:PiliPalaPad/pages/dynamics/index.dart';
+import 'package:PiliPalaPad/pages/home/index.dart';
+import 'package:PiliPalaPad/pages/media/index.dart';
+import 'package:PiliPalaPad/utils/event_bus.dart';
+import 'package:PiliPalaPad/utils/feed_back.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 import './controller.dart';
 
 class MainApp extends StatefulWidget {
@@ -39,7 +39,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
     _mainController.pageController =
         PageController(initialPage: _mainController.selectedIndex);
     enableMYBar = setting.get(SettingBoxKey.enableMYBar, defaultValue: true);
-    useSideBar = setting.get(SettingBoxKey.useSideBar, defaultValue: false);
+    useSideBar = GStorage.GlobalSettings_UseSideBar;
     enableGradientBg =
         setting.get(SettingBoxKey.enableGradientBg, defaultValue: true);
   }

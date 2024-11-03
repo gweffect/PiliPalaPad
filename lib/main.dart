@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:PiliPalaX/utils/cache_manage.dart';
+import 'package:PiliPalaPad/utils/cache_manage.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -9,20 +9,20 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/common/widgets/custom_toast.dart';
-import 'package:PiliPalaX/http/init.dart';
-import 'package:PiliPalaX/models/common/color_type.dart';
-import 'package:PiliPalaX/models/common/theme_type.dart';
-import 'package:PiliPalaX/pages/search/index.dart';
-import 'package:PiliPalaX/pages/video/detail/index.dart';
-import 'package:PiliPalaX/router/app_pages.dart';
-import 'package:PiliPalaX/pages/main/view.dart';
-import 'package:PiliPalaX/services/service_locator.dart';
-import 'package:PiliPalaX/utils/app_scheme.dart';
-import 'package:PiliPalaX/utils/data.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/common/widgets/custom_toast.dart';
+import 'package:PiliPalaPad/http/init.dart';
+import 'package:PiliPalaPad/models/common/color_type.dart';
+import 'package:PiliPalaPad/models/common/theme_type.dart';
+import 'package:PiliPalaPad/pages/search/index.dart';
+import 'package:PiliPalaPad/pages/video/detail/index.dart';
+import 'package:PiliPalaPad/router/app_pages.dart';
+import 'package:PiliPalaPad/pages/main/view.dart';
+import 'package:PiliPalaPad/services/service_locator.dart';
+import 'package:PiliPalaPad/utils/app_scheme.dart';
+import 'package:PiliPalaPad/utils/data.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 import 'package:media_kit/media_kit.dart'; // Provides [Player], [Media], [Playlist] etc.
-import 'package:PiliPalaX/utils/recommend_filter.dart';
+import 'package:PiliPalaPad/utils/recommend_filter.dart';
 import 'package:catcher_2/catcher_2.dart';
 import './services/loggeer.dart';
 
@@ -33,8 +33,7 @@ void main() async {
   if (GStorage.setting.get(SettingBoxKey.autoClearCache, defaultValue: false)) {
     await CacheManage.clearLibraryCache();
   }
-  if (GStorage.setting
-      .get(SettingBoxKey.horizontalScreen, defaultValue: false)) {
+  if (GStorage.GlobalSettings_HorizontalScreen) {
     await SystemChrome.setPreferredOrientations(
       //支持竖屏与横屏
       [
@@ -155,7 +154,7 @@ class MyApp extends StatelessWidget {
         // PaintingBinding.instance.imageCache.maximumSizeBytes = 1000 << 20;
         return GetMaterialApp(
           // showSemanticsDebugger: true,
-          title: 'PiliPalaX',
+          title: 'PiliPalaPad',
           theme: ThemeData(
             // fontFamily: 'HarmonyOS',
             colorScheme: currentThemeValue == ThemeType.dark

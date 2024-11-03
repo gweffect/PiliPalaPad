@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/models/video/play/quality.dart';
-import 'package:PiliPalaX/models/video/play/CDN.dart';
-import 'package:PiliPalaX/pages/setting/widgets/select_dialog.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/models/video/play/quality.dart';
+import 'package:PiliPalaPad/models/video/play/CDN.dart';
+import 'package:PiliPalaPad/pages/setting/widgets/select_dialog.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'widgets/switch_item.dart';

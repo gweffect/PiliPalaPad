@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/common/widgets/network_img_layer.dart';
-import 'package:PiliPalaX/http/user.dart';
-import 'package:PiliPalaX/utils/feed_back.dart';
-import 'package:PiliPalaX/utils/utils.dart';
+import 'package:PiliPalaPad/common/widgets/network_img_layer.dart';
+import 'package:PiliPalaPad/http/user.dart';
+import 'package:PiliPalaPad/utils/feed_back.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../../http/constants.dart';

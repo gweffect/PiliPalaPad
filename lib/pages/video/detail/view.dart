@@ -11,19 +11,19 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:nil/nil.dart';
-import 'package:PiliPalaX/common/widgets/network_img_layer.dart';
-import 'package:PiliPalaX/http/user.dart';
-import 'package:PiliPalaX/models/common/search_type.dart';
-import 'package:PiliPalaX/pages/bangumi/introduction/index.dart';
-import 'package:PiliPalaX/pages/danmaku/view.dart';
-import 'package:PiliPalaX/pages/video/detail/reply/index.dart';
-import 'package:PiliPalaX/pages/video/detail/controller.dart';
-import 'package:PiliPalaX/pages/video/detail/introduction/index.dart';
-import 'package:PiliPalaX/pages/video/detail/related/index.dart';
-import 'package:PiliPalaX/plugin/pl_player/index.dart';
-import 'package:PiliPalaX/plugin/pl_player/models/play_repeat.dart';
-import 'package:PiliPalaX/services/service_locator.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/common/widgets/network_img_layer.dart';
+import 'package:PiliPalaPad/http/user.dart';
+import 'package:PiliPalaPad/models/common/search_type.dart';
+import 'package:PiliPalaPad/pages/bangumi/introduction/index.dart';
+import 'package:PiliPalaPad/pages/danmaku/view.dart';
+import 'package:PiliPalaPad/pages/video/detail/reply/index.dart';
+import 'package:PiliPalaPad/pages/video/detail/controller.dart';
+import 'package:PiliPalaPad/pages/video/detail/introduction/index.dart';
+import 'package:PiliPalaPad/pages/video/detail/related/index.dart';
+import 'package:PiliPalaPad/plugin/pl_player/index.dart';
+import 'package:PiliPalaPad/plugin/pl_player/models/play_repeat.dart';
+import 'package:PiliPalaPad/services/service_locator.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 import '../../../services/shutdown_timer_service.dart';
 import 'widgets/header_control.dart';
@@ -96,8 +96,7 @@ class _VideoDetailPageState extends State<VideoDetailPage>
     });
     autoExitFullscreen =
         setting.get(SettingBoxKey.enableAutoExit, defaultValue: true);
-    horizontalScreen =
-        setting.get(SettingBoxKey.horizontalScreen, defaultValue: false);
+    horizontalScreen = GStorage.GlobalSettings_HorizontalScreen;
     autoPlayEnable =
         setting.get(SettingBoxKey.autoPlayEnable, defaultValue: true);
     autoPiP = setting.get(SettingBoxKey.autoPiP, defaultValue: false);
@@ -538,7 +537,8 @@ class _VideoDetailPageState extends State<VideoDetailPage>
                                 (horizontalScreen ||
                                     MediaQuery.of(context).orientation ==
                                         Orientation.portrait),
-                            onPopInvokedWithResult: (bool didPop, Object? result) {
+                            onPopInvokedWithResult:
+                                (bool didPop, Object? result) {
                               if (isFullScreen.value == true) {
                                 plPlayerController!
                                     .triggerFullScreen(status: false);

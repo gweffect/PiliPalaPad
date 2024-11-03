@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/common/constants.dart';
-import 'package:PiliPalaX/common/widgets/badge.dart';
-import 'package:PiliPalaX/common/widgets/network_img_layer.dart';
-import 'package:PiliPalaX/common/widgets/stat/view.dart';
-import 'package:PiliPalaX/http/search.dart';
-import 'package:PiliPalaX/models/member/coin.dart';
-import 'package:PiliPalaX/utils/utils.dart';
+import 'package:PiliPalaPad/common/constants.dart';
+import 'package:PiliPalaPad/common/widgets/badge.dart';
+import 'package:PiliPalaPad/common/widgets/network_img_layer.dart';
+import 'package:PiliPalaPad/common/widgets/stat/view.dart';
+import 'package:PiliPalaPad/http/search.dart';
+import 'package:PiliPalaPad/models/member/coin.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 
 class MemberCoinsItem extends StatelessWidget {
   final MemberCoinsDataModel coinItem;

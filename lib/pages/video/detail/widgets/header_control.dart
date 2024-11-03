@@ -12,16 +12,16 @@ import 'package:hive/hive.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:ns_danmaku/ns_danmaku.dart';
-import 'package:PiliPalaX/http/user.dart';
-import 'package:PiliPalaX/models/video/play/quality.dart';
-import 'package:PiliPalaX/models/video/play/url.dart';
-import 'package:PiliPalaX/pages/video/detail/index.dart';
-import 'package:PiliPalaX/pages/video/detail/introduction/widgets/menu_row.dart';
-import 'package:PiliPalaX/plugin/pl_player/index.dart';
-import 'package:PiliPalaX/plugin/pl_player/models/play_repeat.dart';
-import 'package:PiliPalaX/utils/storage.dart';
-import 'package:PiliPalaX/http/danmaku.dart';
-import 'package:PiliPalaX/services/shutdown_timer_service.dart';
+import 'package:PiliPalaPad/http/user.dart';
+import 'package:PiliPalaPad/models/video/play/quality.dart';
+import 'package:PiliPalaPad/models/video/play/url.dart';
+import 'package:PiliPalaPad/pages/video/detail/index.dart';
+import 'package:PiliPalaPad/pages/video/detail/introduction/widgets/menu_row.dart';
+import 'package:PiliPalaPad/plugin/pl_player/index.dart';
+import 'package:PiliPalaPad/plugin/pl_player/models/play_repeat.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
+import 'package:PiliPalaPad/http/danmaku.dart';
+import 'package:PiliPalaPad/services/shutdown_timer_service.dart';
 import '../../../../models/video/play/CDN.dart';
 import '../../../../models/video_detail_res.dart';
 import '../../../setting/widgets/select_dialog.dart';
@@ -77,8 +77,7 @@ class _HeaderControlState extends State<HeaderControl> {
     //   heroTag = Get.arguments['heroTag'];
     // }
     videoIntroController = Get.put(VideoIntroController(), tag: heroTag);
-    horizontalScreen =
-        setting.get(SettingBoxKey.horizontalScreen, defaultValue: false);
+    horizontalScreen = GStorage.GlobalSettings_HorizontalScreen;
     defaultCDNService = setting.get(SettingBoxKey.CDNService,
         defaultValue: CDNService.backupUrl.code);
     startClock();

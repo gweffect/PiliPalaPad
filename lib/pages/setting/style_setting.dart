@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/models/common/theme_type.dart';
-import 'package:PiliPalaX/pages/setting/pages/color_select.dart';
-import 'package:PiliPalaX/pages/setting/widgets/select_dialog.dart';
-import 'package:PiliPalaX/pages/setting/widgets/slide_dialog.dart';
-import 'package:PiliPalaX/utils/global_data.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/models/common/theme_type.dart';
+import 'package:PiliPalaPad/pages/setting/pages/color_select.dart';
+import 'package:PiliPalaPad/pages/setting/widgets/select_dialog.dart';
+import 'package:PiliPalaPad/pages/setting/widgets/slide_dialog.dart';
+import 'package:PiliPalaPad/utils/global_data.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 import '../../models/common/dynamic_badge_mode.dart';
 import '../../models/common/up_panel_position.dart';
@@ -67,29 +67,29 @@ class _StyleSettingState extends State<StyleSetting> {
       ),
       body: ListView(
         children: [
-          SetSwitchItem(
-              title: '横屏适配',
-              subTitle: '启用横屏布局与逻辑，平板、折叠屏等可开启；建议全屏方向设为【不改变当前方向】',
-              leading: const Icon(Icons.phonelink_outlined),
-              setKey: SettingBoxKey.horizontalScreen,
-              defaultVal: false,
-              callFn: (value) {
-                if (value) {
-                  autoScreen();
-                  SmartDialog.showToast('已开启横屏适配');
-                } else {
-                  AutoOrientation.portraitUpMode();
-                  SmartDialog.showToast('已关闭横屏适配');
-                }
-              }),
-          const SetSwitchItem(
-            title: '改用侧边栏',
-            subTitle: '开启后底栏与顶栏被替换，且相关设置失效',
-            leading: Icon(Icons.chrome_reader_mode_outlined),
-            setKey: SettingBoxKey.useSideBar,
-            defaultVal: false,
-            needReboot: true,
-          ),
+          // SetSwitchItem(
+          //     title: '横屏适配',
+          //     subTitle: '启用横屏布局与逻辑，平板、折叠屏等可开启；建议全屏方向设为【不改变当前方向】',
+          //     leading: const Icon(Icons.phonelink_outlined),
+          //     setKey: SettingBoxKey.horizontalScreen,
+          //     defaultVal: false,
+          //     callFn: (value) {
+          //       if (value) {
+          //         autoScreen();
+          //         SmartDialog.showToast('已开启横屏适配');
+          //       } else {
+          //         AutoOrientation.portraitUpMode();
+          //         SmartDialog.showToast('已关闭横屏适配');
+          //       }
+          //     }),
+          // const SetSwitchItem(
+          //   title: '改用侧边栏',
+          //   subTitle: '开启后底栏与顶栏被替换，且相关设置失效',
+          //   leading: Icon(Icons.chrome_reader_mode_outlined),
+          //   setKey: SettingBoxKey.useSideBar,
+          //   defaultVal: false,
+          //   needReboot: true,
+          // ),
           const SetSwitchItem(
             title: 'MD3样式底栏',
             subTitle: 'Material You设计规范底栏，关闭可变窄',

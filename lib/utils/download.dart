@@ -69,7 +69,8 @@ class DownloadUtils {
     }
   }
 
-  static Future<bool> checkPermissionDependOnSdkInt(BuildContext context) async {
+  static Future<bool> checkPermissionDependOnSdkInt(
+      BuildContext context) async {
     if (Platform.isAndroid) {
       final androidInfo = await DeviceInfoPlugin().androidInfo;
       if (androidInfo.version.sdkInt <= 32) {
@@ -81,11 +82,12 @@ class DownloadUtils {
     }
     return await requestStoragePer(context);
   }
+
   static Future<bool> downloadImg(BuildContext context, String imgUrl,
       {String imgType = 'cover'}) async {
     try {
       if (!await checkPermissionDependOnSdkInt(context)) {
-      //   // return false;
+        //   // return false;
       }
       SmartDialog.showLoading(msg: '正在下载原图');
       var response = await Dio()
@@ -97,11 +99,11 @@ class DownloadUtils {
       final SaveResult result = await SaverGallery.saveImage(
         Uint8List.fromList(response.data),
         quality: 100,
-        name: picName,
-        fileExtension: 'jpg',
-        // 保存到 PiliPalaX文件夹
-        androidRelativePath: "Pictures/PiliPalaX",
-        androidExistNotSave: false,
+        fileName: picName,
+        extension: 'jpg',
+        // 保存到 PiliPalaPad文件夹
+        androidRelativePath: "Pictures/PiliPalaPad",
+        skipIfExists: false,
       );
       SmartDialog.dismiss();
       if (result.isSuccess) {

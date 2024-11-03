@@ -3,10 +3,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/common/constants.dart';
-import 'package:PiliPalaX/common/widgets/network_img_layer.dart';
-import 'package:PiliPalaX/models/common/theme_type.dart';
-import 'package:PiliPalaX/models/user/info.dart';
+import 'package:PiliPalaPad/common/constants.dart';
+import 'package:PiliPalaPad/common/widgets/network_img_layer.dart';
+import 'package:PiliPalaPad/models/common/theme_type.dart';
+import 'package:PiliPalaPad/models/user/info.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'controller.dart';
 
@@ -55,7 +55,7 @@ class _MinePageState extends State<MinePage> {
               ),
               const SizedBox(width: 5),
               Text(
-                'PiliPalaX',
+                'PiliPalaPad',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(width: 30),

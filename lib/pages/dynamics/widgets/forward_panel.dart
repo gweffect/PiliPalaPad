@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/utils/utils.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 
 import '../../../common/widgets/badge.dart';
 import '../../../common/widgets/network_img_layer.dart';
@@ -66,10 +66,10 @@ InlineSpan picsNodes(List<OpusPicsModel> pics) {
                           ),
                           height > Get.size.height * 0.9
                               ? const PBadge(
-                            text: '长图',
-                            right: 8,
-                            bottom: 8,
-                          )
+                                  text: '长图',
+                                  right: 8,
+                                  bottom: 8,
+                                )
                               : const SizedBox(),
                         ],
                       )),
@@ -104,7 +104,7 @@ InlineSpan picsNodes(List<OpusPicsModel> pics) {
                     width: maxWidth,
                     height: maxWidth,
                     origAspectRatio:
-                    pics[i].width!.toInt() / pics[i].height!.toInt(),
+                        pics[i].width!.toInt() / pics[i].height!.toInt(),
                   ),
                 ));
           },
@@ -118,10 +118,10 @@ InlineSpan picsNodes(List<OpusPicsModel> pics) {
             double maxWidth = box.maxWidth.truncateToDouble();
             double crossCount = len < 3 ? 2 : 3;
             double height = maxWidth /
-                crossCount *
-                (len % crossCount == 0
-                    ? len ~/ crossCount
-                    : len ~/ crossCount + 1) +
+                    crossCount *
+                    (len % crossCount == 0
+                        ? len ~/ crossCount
+                        : len ~/ crossCount + 1) +
                 6;
             return Container(
               padding: const EdgeInsets.only(top: 6),
@@ -145,6 +145,7 @@ InlineSpan picsNodes(List<OpusPicsModel> pics) {
     children: spanChildren,
   );
 }
+
 Widget forWard(item, context, ctr, source, {floor = 1}) {
   TextStyle authorStyle =
       TextStyle(color: Theme.of(context).colorScheme.primary);

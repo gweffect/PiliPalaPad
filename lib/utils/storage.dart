@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:PiliPalaX/models/model_owner.dart';
-import 'package:PiliPalaX/models/search/hot.dart';
-import 'package:PiliPalaX/models/user/info.dart';
+import 'package:PiliPalaPad/models/model_owner.dart';
+import 'package:PiliPalaPad/models/search/hot.dart';
+import 'package:PiliPalaPad/models/user/info.dart';
 import 'global_data.dart';
 
 class GStorage {
@@ -13,6 +13,9 @@ class GStorage {
   static late final Box<dynamic> localCache;
   static late final Box<dynamic> setting;
   static late final Box<dynamic> video;
+
+  static bool GlobalSettings_HorizontalScreen = true;
+  static bool GlobalSettings_UseSideBar = true;
 
   static Future<void> init() async {
     final Directory dir = await getApplicationSupportDirectory();

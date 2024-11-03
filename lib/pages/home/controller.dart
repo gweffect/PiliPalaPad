@@ -4,8 +4,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/models/common/tab_type.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/models/common/tab_type.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 import '../../http/index.dart';
 import '../../utils/feed_back.dart';
 import '../mine/view.dart';
@@ -45,7 +45,7 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
     }
     enableGradientBg =
         setting.get(SettingBoxKey.enableGradientBg, defaultValue: true);
-    useSideBar = setting.get(SettingBoxKey.useSideBar, defaultValue: false);
+    useSideBar = GStorage.GlobalSettings_UseSideBar;
     // 进行tabs配置
     setTabConfig();
   }

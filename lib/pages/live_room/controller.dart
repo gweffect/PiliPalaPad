@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:PiliPalaX/http/constants.dart';
-import 'package:PiliPalaX/http/live.dart';
-import 'package:PiliPalaX/models/live/room_info.dart';
-import 'package:PiliPalaX/plugin/pl_player/index.dart';
+import 'package:PiliPalaPad/http/constants.dart';
+import 'package:PiliPalaPad/http/live.dart';
+import 'package:PiliPalaPad/models/live/room_info.dart';
+import 'package:PiliPalaPad/plugin/pl_player/index.dart';
 import '../../models/live/room_info_h5.dart';
 import '../../utils/storage.dart';
 import '../../utils/video_utils.dart';

@@ -1,10 +1,10 @@
-import 'package:PiliPalaX/utils/extension.dart';
+import 'package:PiliPalaPad/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/http/bangumi.dart';
-import 'package:PiliPalaX/models/bangumi/list.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/http/bangumi.dart';
+import 'package:PiliPalaPad/models/bangumi/list.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 class BangumiController extends GetxController {
   final ScrollController scrollController = ScrollController();

@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:PiliPalaX/models/common/reply_type.dart';
-import 'package:PiliPalaX/pages/video/detail/reply/widgets/reply_item.dart';
+import 'package:PiliPalaPad/models/common/reply_type.dart';
+import 'package:PiliPalaPad/pages/video/detail/reply/widgets/reply_item.dart';
 import 'package:app_links/app_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';

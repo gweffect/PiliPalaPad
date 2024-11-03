@@ -2,10 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/models/video/ai.dart';
-import 'package:PiliPalaX/pages/video/detail/index.dart';
-import 'package:PiliPalaX/utils/utils.dart';
-
+import 'package:PiliPalaPad/models/video/ai.dart';
+import 'package:PiliPalaPad/pages/video/detail/index.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 
 class AiDetail extends StatelessWidget {
   final ModelResult? modelResult;

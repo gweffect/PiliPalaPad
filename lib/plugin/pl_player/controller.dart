@@ -13,13 +13,13 @@ import 'package:hive/hive.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:ns_danmaku/ns_danmaku.dart';
-import 'package:PiliPalaX/http/video.dart';
-import 'package:PiliPalaX/pages/mine/controller.dart';
-import 'package:PiliPalaX/plugin/pl_player/index.dart';
-import 'package:PiliPalaX/plugin/pl_player/models/play_repeat.dart';
-import 'package:PiliPalaX/services/service_locator.dart';
-import 'package:PiliPalaX/utils/feed_back.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/http/video.dart';
+import 'package:PiliPalaPad/pages/mine/controller.dart';
+import 'package:PiliPalaPad/plugin/pl_player/index.dart';
+import 'package:PiliPalaPad/plugin/pl_player/models/play_repeat.dart';
+import 'package:PiliPalaPad/services/service_locator.dart';
+import 'package:PiliPalaPad/utils/feed_back.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 import 'package:screen_brightness/screen_brightness.dart';
 import 'package:universal_platform/universal_platform.dart';
 
@@ -1205,7 +1205,7 @@ class PlPlayerController {
       if (mode == FullScreenMode.none) {
         return;
       }
-      if (!setting.get(SettingBoxKey.horizontalScreen, defaultValue: false)) {
+      if (!GStorage.GlobalSettings_HorizontalScreen) {
         await verticalScreenForTwoSeconds();
       } else {
         await autoScreen();

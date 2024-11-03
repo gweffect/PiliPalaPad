@@ -5,10 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/common/constants.dart';
-import 'package:PiliPalaX/common/widgets/network_img_layer.dart';
-import 'package:PiliPalaX/pages/member/index.dart';
-import 'package:PiliPalaX/utils/utils.dart';
+import 'package:PiliPalaPad/common/constants.dart';
+import 'package:PiliPalaPad/common/widgets/network_img_layer.dart';
+import 'package:PiliPalaPad/pages/member/index.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 
 import 'widgets/conis.dart';
 import 'widgets/profile.dart';

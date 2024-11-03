@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:PiliPalaX/common/constants.dart';
-import 'package:PiliPalaX/common/widgets/badge.dart';
-import 'package:PiliPalaX/common/widgets/network_img_layer.dart';
-import 'package:PiliPalaX/common/widgets/stat/view.dart';
-import 'package:PiliPalaX/http/search.dart';
-import 'package:PiliPalaX/utils/utils.dart';
+import 'package:PiliPalaPad/common/constants.dart';
+import 'package:PiliPalaPad/common/widgets/badge.dart';
+import 'package:PiliPalaPad/common/widgets/network_img_layer.dart';
+import 'package:PiliPalaPad/common/widgets/stat/view.dart';
+import 'package:PiliPalaPad/http/search.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 
 class MemberSeasonsItem extends StatelessWidget {
   final dynamic seasonItem;
@@ -25,7 +25,7 @@ class MemberSeasonsItem extends StatelessWidget {
       child: InkWell(
         onTap: () async {
           int cid =
-          await SearchHttp.ab2c(aid: seasonItem.aid, bvid: seasonItem.bvid);
+              await SearchHttp.ab2c(aid: seasonItem.aid, bvid: seasonItem.bvid);
           Get.toNamed('/video?bvid=${seasonItem.bvid}&cid=$cid',
               arguments: {'videoItem': seasonItem, 'heroTag': heroTag});
         },

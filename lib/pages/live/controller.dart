@@ -1,10 +1,10 @@
-import 'package:PiliPalaX/utils/extension.dart';
+import 'package:PiliPalaPad/utils/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/http/live.dart';
-import 'package:PiliPalaX/models/live/item.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/http/live.dart';
+import 'package:PiliPalaPad/models/live/item.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 class LiveController extends GetxController {
   final ScrollController scrollController = ScrollController();

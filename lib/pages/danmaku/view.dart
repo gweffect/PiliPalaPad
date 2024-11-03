@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:ns_danmaku/ns_danmaku.dart';
-import 'package:PiliPalaX/models/danmaku/dm.pb.dart';
-import 'package:PiliPalaX/pages/danmaku/index.dart';
-import 'package:PiliPalaX/plugin/pl_player/index.dart';
-import 'package:PiliPalaX/utils/danmaku.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/models/danmaku/dm.pb.dart';
+import 'package:PiliPalaPad/pages/danmaku/index.dart';
+import 'package:PiliPalaPad/plugin/pl_player/index.dart';
+import 'package:PiliPalaPad/utils/danmaku.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 /// 传入播放器控制器，监听播放进度，加载对应弹幕
 class PlDanmaku extends StatefulWidget {

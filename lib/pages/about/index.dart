@@ -6,11 +6,11 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:PiliPalaX/http/index.dart';
-import 'package:PiliPalaX/models/github/latest.dart';
-import 'package:PiliPalaX/pages/setting/controller.dart';
-import 'package:PiliPalaX/utils/storage.dart';
-import 'package:PiliPalaX/utils/utils.dart';
+import 'package:PiliPalaPad/http/index.dart';
+import 'package:PiliPalaPad/models/github/latest.dart';
+import 'package:PiliPalaPad/pages/setting/controller.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
+import 'package:PiliPalaPad/utils/utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../utils/cache_manage.dart';
 
@@ -58,7 +58,7 @@ class _AboutPageState extends State<AboutPage> {
             )),
           ),
           ListTile(
-            title: Text('PiliPalaX',
+            title: Text('PiliPalaPad',
                 textAlign: TextAlign.center,
                 style: Theme.of(context)
                     .textTheme
@@ -122,7 +122,7 @@ class _AboutPageState extends State<AboutPage> {
             leading: const Icon(Icons.star_outline_outlined),
             title: const Text('Github开源仓库'),
             trailing: Text(
-              'github.com/orz12/PiliPalaX',
+              'github.com/orz12/PiliPalaPad',
               style: subTitleStyle,
             ),
           ),
@@ -464,7 +464,7 @@ class AboutController extends GetxController {
   // aPay() {
   //   try {
   //     launchUrl(
-  //       Uri.parse('https://pilipalanet.mysxl.cn/pilipalaxadmire'),
+  //       Uri.parse('https://pilipalanet.mysxl.cn/PiliPalaPadadmire'),
   //       mode: LaunchMode.externalApplication,
   //     );
   //   } catch (e) {

@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:PiliPalaX/pages/video/detail/introduction/controller.dart';
-import 'package:PiliPalaX/utils/id_utils.dart';
+import 'package:PiliPalaPad/pages/video/detail/introduction/controller.dart';
+import 'package:PiliPalaPad/utils/id_utils.dart';
 import 'package:easy_debounce/easy_throttle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -13,12 +13,12 @@ import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
-import 'package:PiliPalaX/plugin/pl_player/controller.dart';
-import 'package:PiliPalaX/plugin/pl_player/models/duration.dart';
-import 'package:PiliPalaX/plugin/pl_player/models/fullscreen_mode.dart';
-import 'package:PiliPalaX/plugin/pl_player/utils.dart';
-import 'package:PiliPalaX/utils/feed_back.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/plugin/pl_player/controller.dart';
+import 'package:PiliPalaPad/plugin/pl_player/models/duration.dart';
+import 'package:PiliPalaPad/plugin/pl_player/models/fullscreen_mode.dart';
+import 'package:PiliPalaPad/plugin/pl_player/utils.dart';
+import 'package:PiliPalaPad/utils/feed_back.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 import 'package:saver_gallery/saver_gallery.dart';
 import 'package:screen_brightness/screen_brightness.dart';
 
@@ -1109,9 +1109,9 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                                   final SaveResult result =
                                       await SaverGallery.saveImage(
                                     value,
-                                    name: name,
+                                    fileName: name,
                                     androidRelativePath: "Pictures/Screenshots",
-                                    androidExistNotSave: false,
+                                    skipIfExists: false,
                                   );
 
                                   if (result.isSuccess) {
@@ -1226,7 +1226,8 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                                   Duration.zero,
                                   player.state.duration,
                                 );
-                                widget.controller.seekTo(result, type: 'slider');
+                                widget.controller
+                                    .seekTo(result, type: 'slider');
                                 widget.controller.play();
                               },
                             ),
@@ -1271,7 +1272,8 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                                   Duration.zero,
                                   player.state.duration,
                                 );
-                                widget.controller.seekTo(result, type: 'slider');
+                                widget.controller
+                                    .seekTo(result, type: 'slider');
                                 widget.controller.play();
                               },
                             ),

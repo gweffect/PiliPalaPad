@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/models/common/dynamics_type.dart';
-import 'package:PiliPalaX/models/common/reply_sort_type.dart';
-import 'package:PiliPalaX/pages/setting/widgets/select_dialog.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/models/common/dynamics_type.dart';
+import 'package:PiliPalaPad/models/common/reply_sort_type.dart';
+import 'package:PiliPalaPad/pages/setting/widgets/select_dialog.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 import '../home/index.dart';
 import 'controller.dart';

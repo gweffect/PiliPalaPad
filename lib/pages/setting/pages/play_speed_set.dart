@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:PiliPalaX/pages/setting/widgets/switch_item.dart';
-import 'package:PiliPalaX/plugin/pl_player/index.dart';
-import 'package:PiliPalaX/plugin/pl_player/models/play_speed.dart';
-import 'package:PiliPalaX/utils/storage.dart';
+import 'package:PiliPalaPad/pages/setting/widgets/switch_item.dart';
+import 'package:PiliPalaPad/plugin/pl_player/index.dart';
+import 'package:PiliPalaPad/plugin/pl_player/models/play_speed.dart';
+import 'package:PiliPalaPad/utils/storage.dart';
 
 class PlaySpeedPage extends StatefulWidget {
   const PlaySpeedPage({super.key});
