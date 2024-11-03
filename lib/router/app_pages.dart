@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:PiliPalaPad/pages/user/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
@@ -187,6 +188,8 @@ class Routes {
     CustomGetPage(name: '/subDetail', page: () => const SubDetailPage()),
     // 弹幕屏蔽管理
     CustomGetPage(name: '/danmakuBlock', page: () => const DanmakuBlockPage()),
+    //账号页面
+    CustomGetPage(name: '/user', page: () => const UserPage()),
   ];
 }
 

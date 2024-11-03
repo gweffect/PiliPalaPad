@@ -39,5 +39,18 @@ List defaultNavigationBars = [
     ),
     'label': "媒体库",
     'count': 0,
+  },
+  {
+    'id': 3,
+    'icon': const Icon(
+      Icons.history_outlined,
+      size: 21,
+    ),
+    'selectIcon': const Icon(
+      Icons.history,
+      size: 21,
+    ),
+    'label': "观看历史",
+    'count': 0,
   }
 ];

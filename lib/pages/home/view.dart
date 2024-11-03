@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:PiliPalaPad/pages/main/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -242,7 +243,12 @@ class UserAndSearchVertical extends StatelessWidget {
                           child: Material(
                             color: Colors.transparent,
                             child: InkWell(
-                              onTap: () => ctr.showUserInfoDialog(context),
+                              onTap: () {
+                                //ctr.showUserInfoDialog(context);
+                                //Get.toNamed('/user');
+                                var mainController = Get.find<MainController>();
+                                mainController.pageController.jumpToPage(4);
+                              },
                               splashColor: Theme.of(context)
                                   .colorScheme
                                   .primaryContainer
@@ -255,8 +261,10 @@ class UserAndSearchVertical extends StatelessWidget {
                         )
                       ],
                     )
-                  : DefaultUser(
-                      callback: () => ctr.showUserInfoDialog(context)),
+                  : DefaultUser(callback: () {
+                      ctr.showUserInfoDialog(context);
+                      //Get.toNamed('/user');
+                    }),
             )),
         const SizedBox(height: 8),
         Obx(() => ctr.userLogin.value

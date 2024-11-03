@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:PiliPalaPad/pages/history/view.dart';
+import 'package:PiliPalaPad/pages/user/view.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
@@ -20,6 +22,8 @@ class MainController extends GetxController {
     // const RankPage(),
     const DynamicsPage(),
     const MediaPage(),
+    const HistoryPage(),
+    const UserPage()
   ];
   RxList navigationBars = defaultNavigationBars.obs;
   final StreamController<bool> bottomBarStream =
@@ -32,6 +36,9 @@ class MainController extends GetxController {
   Box userInfoCache = GStorage.userInfo;
   RxBool userLogin = false.obs;
   late DynamicBadgeMode dynamicBadgeType;
+  int? get selectedIndexProcessed {
+    return selectedIndex > (navigationBars.length - 1) ? null : selectedIndex;
+  }
 
   @override
   void onInit() {

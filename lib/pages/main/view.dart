@@ -166,7 +166,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
                       groupAlignment: 1,
                       minWidth: context.width * 0.0286 + 28.56,
                       backgroundColor: Colors.transparent,
-                      selectedIndex: _mainController.selectedIndex,
+                      selectedIndex: _mainController.selectedIndexProcessed,
                       onDestinationSelected: (value) => setIndex(value),
                       labelType: NavigationRailLabelType.none,
                       leading: UserAndSearchVertical(ctr: _homeController),
